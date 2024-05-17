@@ -1,7 +1,48 @@
 /* eslint-disable react/prop-types */
-import { LOGO_IMAGE } from "../../../mockData";
+import { LOGO_IMAGE } from "../../mockData";
+import { Link, useLocation } from "react-router-dom";
 
-export const Banner = (props) => {
+const menuHeader = [
+  {
+    id: 0,
+    title: "tin chung",
+    link: "/",
+  },
+  {
+    id: 1,
+    title: "Vòng bảng",
+    link: "/tab2",
+  },
+  {
+    id: 2,
+    title: "Vòng loại trực tiếp",
+    link: "/tab3",
+  },
+  {
+    id: 3,
+    title: "Bảng xếp hạng",
+    link: "/tab4",
+  },
+  {
+    id: 4,
+    title: "Đội thi đấu",
+    link: "/tab5",
+  },
+  {
+    id: 4,
+    title: "Thông kê",
+    link: "/tab6",
+  },
+  {
+    id: 5,
+    title: "Bình chọn",
+    link: "/tab7",
+  },
+];
+
+export const Banner = () => {
+  const pathname = useLocation();
+
   return (
     <div className="bg-[#16191e] w-full text-[#f5f5f5] pt-4">
       <div className="container max-w-[1170px] mx-auto">
@@ -64,18 +105,21 @@ export const Banner = (props) => {
         </div>
 
         {/* Menu */}
-        <div className="">
-          <ul className="flex items-center gap-5 text-base font-semibold mt-3 pb-2 justify-between">
-            {props.data.map((item) => (
+        <ul className="flex items-center gap-12 text-base font-semibold mt-6 pb-2">
+          {menuHeader.map((item) => (
+            <Link key={item.id} to={item.link}>
               <li
-                className="hover:text-primary transition-all duration-500 cursor-pointer uppercase relative before:absolute before:size-3 before:top-0 before:bg-gray-200 before:rotate-45 before:left-1/2 before:-translate-x-1/2 before:translate-y-7"
-                key={item.id}
+                className={`${
+                  pathname.pathname == item.link
+                    ? "text-green before:absolute before:size-3 before:top-0 before:bg-gray-200 before:rotate-45 before:left-1/2 before:-translate-x-1/2 before:translate-y-7"
+                    : "text-[#5a6172]"
+                } hover:text-green transition-all duration-500 cursor-pointer uppercase relative  `}
               >
                 {item.title}
               </li>
-            ))}
-          </ul>
-        </div>
+            </Link>
+          ))}
+        </ul>
       </div>
     </div>
   );

@@ -4,7 +4,7 @@ import { LOGO_IMAGE } from "../../mockData";
 export const Header = () => {
   return (
     <div
-      className="px-6 sticky top-0 left-0 w-full flex justify-between items-center z-10"
+      className="px-6 sticky top-0 left-0 w-full flex justify-between items-center z-40"
       style={{
         backgroundColor: "#3bbf1a",
         backgroundImage:
@@ -27,7 +27,7 @@ export const Header = () => {
         <Link to="/dashboard" className="hover:text-[#ba9dec] cursor-pointer">
           Giải đấu
         </Link>
-        <Link to="/dashboard" className="hover:text-[#ba9dec] cursor-pointer">
+        <Link to="/tab5" className="hover:text-[#ba9dec] cursor-pointer">
           Đội thi đấu
         </Link>
         <Link to="/dashboard" className="hover:text-[#ba9dec] cursor-pointer">

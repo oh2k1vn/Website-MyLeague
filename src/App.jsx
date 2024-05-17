@@ -1,10 +1,17 @@
 /* eslint-disable react/no-unknown-property */
-import { Header } from "./components/Header";
-import { Footer } from "./components/Footer";
-import { Route, Routes } from "react-router-dom";
-import { HomePage } from "./pages/home";
-import { DashboardPage } from "./pages/dashboard";
 import { useEffect, useState } from "react";
+import { Route, Routes } from "react-router-dom";
+import { Banner } from "./components/Dashboard";
+import { Footer } from "./components/Footer";
+import { Header } from "./components/Header";
+
+import Dashboard from "./pages/tab1";
+import RoundTable from "./pages/tab2";
+import KnockoutRound from "./pages/tab3";
+import Charts from "./pages/tab4";
+import CompetitionTeam from "./pages/tab5";
+import Statistical from "./pages/tab6";
+import Comment from "./pages/tab7";
 
 function App() {
   const [isVisible, setIsVisible] = useState(false);
@@ -31,12 +38,19 @@ function App() {
   }, []);
 
   return (
-    <div className="w-full min-h-screen bg-gray-200 flex flex-col">
+    <div className="w-full min-h-screen bg-gray-200 flex flex-col ">
       <Header />
-      <div className="flex-1">
+      <Banner />
+
+      <div className="flex-1 container py-6">
         <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/dashboard" element={<DashboardPage />} />
+          <Route path="/" element={<Dashboard />} />
+          <Route path="/tab2" element={<RoundTable />} />
+          <Route path="/tab3" element={<KnockoutRound />} />
+          <Route path="/tab4" element={<Charts />} />
+          <Route path="/tab5" element={<CompetitionTeam />} />
+          <Route path="/tab6" element={<Statistical />} />
+          <Route path="/tab7" element={<Comment />} />
           <Route
             path="*"
             element={

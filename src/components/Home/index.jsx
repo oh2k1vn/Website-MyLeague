@@ -1,9 +1,23 @@
 import { CountUpHome } from "./CountUpHome";
+import { motion } from "framer-motion";
 
 export const Home = () => {
+  const container = (x, y, delay) => ({
+    hidden: { x: x, y: y, opacity: 0 },
+    visible: {
+      x: 0,
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: 0.5,
+        delay: delay,
+      },
+    },
+  });
+
   return (
     <>
-      <p className=" font-bold text-4xl text-white">
+      <p className=" font-medium text-5xl text-white">
         Tổ chức giải đấu dễ dàng
         <br /> Quản lý đội thể thao đơn giản!
       </p>
@@ -36,11 +50,29 @@ export const Home = () => {
         </button>
       </div>
 
-      <div className="flex gap-16 mt-16 animate-fade-down animate-once">
-        <CountUpHome title="Giải đấu" number={43969} />
-        <CountUpHome title="Đội thi đấu" number={230030} />
-        <CountUpHome title="Vận động viên" number={1092705} />
-        <CountUpHome title="Trận đấu" number={1492435} />
+      <div className="flex *:flex *:gap-16 gap-16 mt-16">
+        <motion.div
+          initial="hidden"
+          animate="visible"
+          variants={container(-100, -100, 1)}
+          viewport={{
+            once: true,
+          }}
+        >
+          <CountUpHome title="Giải đấu" number={43969} />
+          <CountUpHome title="Đội thi đấu" number={230030} />
+        </motion.div>
+        <motion.div
+          initial="hidden"
+          animate="visible"
+          variants={container(100, -100, 1)}
+          viewport={{
+            once: true,
+          }}
+        >
+          <CountUpHome title="Vận động viên" number={1092705} />
+          <CountUpHome title="Trận đấu" number={1492435} />
+        </motion.div>
       </div>
     </>
   );

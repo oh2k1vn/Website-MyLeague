@@ -5,8 +5,50 @@ export const Footer = () => {
   return (
     <div className="bg-white shadow w-full">
       <div className="container max-w-[1170px] mx-auto grid grid-cols-3 p-6 ">
-        <div dangerouslySetInnerHTML={{ __html: col1 }}></div>
-        <div dangerouslySetInnerHTML={{ __html: col2 }}></div>
+        <div className="flex flex-col gap-3 text-[15px]">
+          <p className="text-[#9ba4b4]">
+            Nền tảng quản lý giải đấu, đội thi đấu
+          </p>
+          <p className="flex gap-4 text-green cursor-pointer">
+            <span>Điều khoản sử dụng</span>
+            <span>Chính sách bảo mật</span>
+          </p>
+          <p className="flex gap-4 text-green cursor-pointer">
+            <span>Chính sách bảo mật</span>
+            <span>Chính sách thanh toánLiên Hệ</span>
+          </p>
+          <p className="text-green cursor-pointer">
+            Chính sách bảo mật thông tin cá nhân
+          </p>
+          <p className="flex gap-4 text-green cursor-pointer">
+            <span>Nhận xét về MyLeague</span>
+            <span>Bảng giá</span>
+          </p>
+        </div>
+        <div className="text-center">
+          <p className="text-[16px] text-green uppercase">
+            CÔNG TY CỔ PHẦN MYLEAGUE
+          </p>
+          <p className="flex ">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="size-6"
+              viewBox="0 0 24 24"
+            >
+              <path
+                fill="currentColor"
+                d="M22 6v12q0 .825-.587 1.413T20 20H4q-.825 0-1.412-.587T2 18V6q0-.825.588-1.412T4 4h16q.825 0 1.413.588T22 6M4 8h16V6H4zm0 4v6h16v-6zm0 6V6z"
+              />
+            </svg>{" "}
+            : Tầng 8 Tòa nhà 185 phố Giảng Võ, Phường Cát Linh, Quận Đống Đa,
+            Thành phố Hà Nội, Việt Nam
+          </p>
+          <p>024 7307 2628</p>
+          <p>contact@myleague.vn</p>
+          <p className="mt-6 mx-14">
+            © 2024 - Bản quyền thuộc về myleague.vn Đã đăng ký bản quyền
+          </p>
+        </div>
       </div>
 
       <div

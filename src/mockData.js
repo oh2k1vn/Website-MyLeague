@@ -29,44 +29,6 @@ export const topRankCUP = [
   },
 ];
 
-export const menuHeader = [
-  {
-    id: 0,
-    title: "tin chung",
-    isActive: false,
-  },
-  {
-    id: 1,
-    title: "Vòng bảng",
-    isActive: false,
-  },
-  {
-    id: 2,
-    title: "Vòng loại trực tiếp",
-    isActive: false,
-  },
-  {
-    id: 3,
-    title: "Bảng xếp hạng",
-    isActive: false,
-  },
-  {
-    id: 4,
-    title: "Đội thi đấu",
-    isActive: false,
-  },
-  {
-    id: 4,
-    title: "Thông kê",
-    isActive: false,
-  },
-  {
-    id: 5,
-    title: "Bình chọn",
-    isActive: false,
-  },
-];
-
 export const contentHTML = `<p style="margin-left:7px"><span style="color:#000000"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><strong><span style="font-size:13.0pt">Giải</span></strong><strong> </strong><strong><span style="font-size:13.0pt">Bóng đá VINASA Football Championship 2024 </span></strong><span style="font-size:13.0pt">được tổ chức nhằm mục đích:</span></span></span></span></p>
 <ul style="margin-left:40px">
 <li><span style="color:#000000"><span style="font-size:13pt">Kỷ niệm 22 năm thành lập VINASA</span></span></li>
