@@ -1,11 +1,12 @@
 /* eslint-disable react/prop-types */
 
 import React from "react";
+import Time from "../components/pages/tab2/Time";
 
 const RoundTable = () => {
   const [activeTable, setActiveTable] = React.useState(0);
   return (
-    <>
+    <div className="page">
       <div>
         <p className="text-[14px]">
           <span className="font-bold mr-1 ">Giai đoạn đấu vòng bảng:</span> Có 8
@@ -44,8 +45,10 @@ const RoundTable = () => {
           <Table title="Bảng B" />
           <Table title="Bảng C" />
         </>
+      ) : activeTable == 2 ? (
+        <Time />
       ) : null}
-    </>
+    </div>
   );
 };
 export default RoundTable;

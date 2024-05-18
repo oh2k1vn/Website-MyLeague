@@ -4,7 +4,7 @@ const Comment = () => {
   const [active, setActive] = React.useState(0);
   const [isSidebar, setIsSidebar] = React.useState(false);
   return (
-    <div className="flex rounded bg-white shadow overflow-hidden">
+    <div className="page flex rounded bg-white shadow overflow-hidden">
       <div
         className={` bg-[#596377] text-[#596377] py-4 transition-all duration-300 ${
           isSidebar ? "w-[4%]" : "w-[20%]"

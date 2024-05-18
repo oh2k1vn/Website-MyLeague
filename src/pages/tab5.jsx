@@ -2,7 +2,7 @@ import { TEAMS } from "../mocks/teams";
 
 const CompetitionTeam = () => {
   return (
-    <>
+    <div className="page">
       <div className="flex justify-between items-center">
         <p>Có 32 đội và 563 người chơi tham gia giải</p>
         <div className="bg-[#4d90fe] rounded text-white px-3 py-1 flex items-center gap-1">
@@ -58,7 +58,7 @@ const CompetitionTeam = () => {
           </div>
         ))}
       </div>
-    </>
+    </div>
   );
 };
 export default CompetitionTeam;
