@@ -48,47 +48,36 @@ const teams = [
 
 const TeamCompetes = () => {
   return (
-    <div className="container mx-auto p-4">
-      <table className="min-w-full bg-white border border-gray-300">
+    <div className="w-full mx-auto p-4 mt-4">
+      <table className="min-w-full bg-white border border-gray-300 rounded overflow-hidden shadow">
         <thead>
-          <tr>
-            <th className="px-4 py-2 border border-gray-300">#</th>
-            <th className="px-4 py-2 border border-gray-300">Tên đội</th>
-            <th className="px-4 py-2 border border-gray-300">Số trận</th>
-            <th className="px-4 py-2 border border-gray-300">T-H-B</th>
-            <th className="px-4 py-2 border border-gray-300">
-              Số bàn ghi được
-            </th>
-            <th className="px-4 py-2 border border-gray-300">Số bàn thua</th>
-            <th className="px-4 py-2 border border-gray-300">Hiệu số</th>
-            <th className="px-4 py-2 border border-gray-300">Thẻ vàng</th>
-            <th className="px-4 py-2 border border-gray-300">Thẻ đỏ</th>
+          <tr className="*:bg-[#c7c7c7] *:px-4 *:py-3 *:border *:border-gray-300 text-[#59637b]">
+            <th className="">#</th>
+            <th>Tên đội</th>
+            <th>Số trận</th>
+            <th>T-H-B</th>
+            <th>Số bàn ghi được</th>
+            <th>Số bàn thua</th>
+            <th>Hiệu số</th>
+            <th>Thẻ vàng</th>
+            <th>Thẻ đỏ</th>
           </tr>
         </thead>
         <tbody>
           {teams.map((team) => (
-            <tr key={team.id} className="hover:bg-gray-100">
-              <td className="px-4 py-2 border border-gray-300">{team.id}</td>
-              <td className="px-4 py-2 border border-gray-300">{team.name}</td>
-              <td className="px-4 py-2 border border-gray-300">
-                {team.played}
-              </td>
-              <td className="px-4 py-2 border border-gray-300">{`${team.won}-${team.drawn}-${team.lost}`}</td>
-              <td className="px-4 py-2 border border-gray-300">
-                {team.goalsFor}
-              </td>
-              <td className="px-4 py-2 border border-gray-300">
-                {team.goalsAgainst}
-              </td>
-              <td className="px-4 py-2 border border-gray-300">
-                {team.goalDifference}
-              </td>
-              <td className="px-4 py-2 border border-gray-300">
-                {team.yellowCards}
-              </td>
-              <td className="px-4 py-2 border border-gray-300">
-                {team.redCards}
-              </td>
+            <tr
+              key={team.id}
+              className="hover:bg-gray-100 *:border-b border-gray-300 *:py-3 *:px-4 *:text-center"
+            >
+              <td>{team.id}</td>
+              <td className="flex justify-start text-green">{team.name}</td>
+              <td>{team.played}</td>
+              <td>{`${team.won}-${team.drawn}-${team.lost}`}</td>
+              <td>{team.goalsFor}</td>
+              <td>{team.goalsAgainst}</td>
+              <td>{team.goalDifference}</td>
+              <td>{team.yellowCards}</td>
+              <td>{team.redCards}</td>
             </tr>
           ))}
         </tbody>

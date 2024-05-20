@@ -95,7 +95,7 @@ const TopRound = () => {
   };
 
   return (
-    <div className="container mx-auto p-4">
+    <div className="mt-12">
       <div className="overflow-x-auto">
         {data.tables.map((table, index) => (
           <div key={index} className="mb-8">
@@ -104,9 +104,12 @@ const TopRound = () => {
                 <tr>
                   <th
                     colSpan="1"
-                    className="bg-purple-600 text-white py-2 text-left px-4 w-fit"
+                    className=" text-white py-2 text-left px-4 w-fit"
                     style={{
                       clipPath: "polygon(0 0, 75% 0, 100% 100%, 0% 100%)",
+                      backgroundColor: "#796cc2",
+                      backgroundImage:
+                        "linear-gradient(to right top, #9467c1, #8c69c2, #846ac2, #7b6cc2, #736dc2, #736dc2, #736dc2, #736dc2, #7c6cc2, #846ac2, #8d69c2, #9567c1)",
                     }}
                   >
                     {table.title}
@@ -125,15 +128,20 @@ const TopRound = () => {
               </thead>
               <tbody className="bg-white">
                 {table.teams.map((team, index) => (
-                  <tr key={index} className="border-b">
-                    <td className="py-2 px-4">{team.position}</td>
-                    <td className="py-2 px-4">{team.name}</td>
-                    <td className="py-2 px-4">{team.matches}</td>
-                    <td className="py-2 px-4">{team.record}</td>
-                    <td className="py-2 px-4">{team.goalDifference}</td>
-                    <td className="py-2 px-4">{team.yellowRedCards}</td>
-                    <td className="py-2 px-4">{team.points}</td>
-                    <td className="py-2 px-4 flex gap-1 items-center">
+                  <tr
+                    key={index}
+                    className="border-b *:py-2 *:px-4 *:text-center"
+                  >
+                    <td>{team.position}</td>
+                    <td className="flex justify-start text-[#1929bf] hover:text-green cursor-pointer capitalize">
+                      {team.name}
+                    </td>
+                    <td>{team.matches}</td>
+                    <td>{team.record}</td>
+                    <td>{team.goalDifference}</td>
+                    <td>{team.yellowRedCards}</td>
+                    <td>{team.points}</td>
+                    <td className="flex gap-1 items-center justify-center">
                       {team.history.split("").map(renderHistoryIcon)}
                     </td>
                   </tr>

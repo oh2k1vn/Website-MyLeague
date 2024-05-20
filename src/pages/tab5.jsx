@@ -24,13 +24,11 @@ const CompetitionTeam = () => {
         {TEAMS.map((item, index) => (
           <div
             key={index}
-            className="w-full rounded bg-white shadow-sm p-4 flex flex-col gap-4 text-center"
+            className="w-full rounded bg-white shadow-sm shadow-[#d8d8d8] flex flex-col gap-4 text-center group cursor-pointer py-4 "
           >
-            <div>
-              <img src={item.logo} alt="" className="size-28 mx-auto " />
-              <p className="text-[#3bbf1a] text-base ">{item.name}</p>
-            </div>
-            <div className="flex flex-col gap-3  border-t border-b border-dashed py-4">
+            <img src={item.logo} alt="" className="size-28 mx-auto " />
+            <p className="text-[#3bbf1a] text-base ">{item.name}</p>
+            <div className="flex flex-col gap-3  border-t border-b border-dashed py-4 relative">
               <p>{item.matchPlayed} Trận đã chơi</p>
 
               <div className="flex justify-center items-center gap-2">
@@ -44,6 +42,15 @@ const CompetitionTeam = () => {
                   {item.lose} thua
                 </span>
               </div>
+
+              <span
+                style={{
+                  background: "#00cd1a",
+                  backgroundImage:
+                    "linear-gradient(270deg, #00ff0c, #00f22c, #00e53c, #00d846, #00cb4e, #00c577, #00bc94, #00b2a4, #00a8ca, #0097f4, #007bff, #8441eb)",
+                }}
+                className="ease absolute bottom-0 left-1/2 -translate-x-1/2 h-[1px] w-0 transition-all duration-300 group-hover:w-full"
+              ></span>
             </div>
             <div>
               <p>Thành viên</p>

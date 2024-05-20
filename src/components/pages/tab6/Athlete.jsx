@@ -88,57 +88,34 @@ const players = [
 
 const Athlete = () => {
   return (
-    <div className="container mx-auto p-4">
-      <table className="min-w-full bg-white border border-gray-300">
+    <div className="mx-auto p-4 mt-4">
+      <table className="min-w-full bg-white border border-gray-300 rounded overflow-hidden shadow">
         <thead>
-          <tr>
-            <th className="px-4 py-2 border border-gray-300">#</th>
-            <th className="px-4 py-2 border border-gray-300">Vận động viên</th>
-            <th className="px-4 py-2 border border-gray-300">Số áo</th>
-            <th className="px-4 py-2 border border-gray-300">Đội thi đấu</th>
-            <th className="px-4 py-2 border border-gray-300">
-              Số bàn ghi được
-            </th>
-            <th className="px-4 py-2 border border-gray-300">Phản lưới nhà</th>
-            <th className="px-4 py-2 border border-gray-300">Thẻ vàng</th>
-            <th className="px-4 py-2 border border-gray-300">Thẻ đỏ</th>
+          <tr className="*:bg-[#c7c7c7] *:px-4 *:py-3 *:border *:border-gray-300 text-[#59637b]">
+            <th>#</th>
+            <th>Vận động viên</th>
+            <th>Số áo</th>
+            <th>Đội thi đấu</th>
+            <th>Số bàn ghi được</th>
+            <th>Phản lưới nhà</th>
+            <th>Thẻ vàng</th>
+            <th>Thẻ đỏ</th>
           </tr>
         </thead>
-        <tbody>
+        <tbody className="divide-y divide-slate-200 bg-white text-slate-800">
           {players.map((player) => (
-            <tr key={player.id} className="hover:bg-gray-100">
-              <td className="px-4 py-2 border border-gray-300">{player.id}</td>
-              <td className="px-4 py-2 border border-gray-300 flex items-center">
-                <img
-                  src={player.imgSrc}
-                  alt={player.name}
-                  className="w-10 h-10 rounded-full mr-2"
-                />
-                {player.name}
-              </td>
-              <td className="px-4 py-2 border border-gray-300">
-                {player.shirtNumber}
-              </td>
-              <td className="px-4 py-2 border border-gray-300 flex items-center">
-                <img
-                  src={player.teamLogo}
-                  alt={player.team}
-                  className="w-6 h-6 mr-2"
-                />
-                {player.team}
-              </td>
-              <td className="px-4 py-2 border border-gray-300">
-                {player.goals}
-              </td>
-              <td className="px-4 py-2 border border-gray-300">
-                {player.ownGoals}
-              </td>
-              <td className="px-4 py-2 border border-gray-300">
-                {player.yellowCards}
-              </td>
-              <td className="px-4 py-2 border border-gray-300">
-                {player.redCards}
-              </td>
+            <tr
+              key={player.id}
+              className="cursor-pointer odd:bg-white even:bg-[#f3f3f3] hover:bg-[#e0e0e0]  *:py-3 *:px-4 *:text-center"
+            >
+              <td>{player.id}</td>
+              <td className="flex items-center text-green">{player.name}</td>
+              <td>{player.shirtNumber}</td>
+              <td>{player.team}</td>
+              <td>{player.goals}</td>
+              <td>{player.ownGoals}</td>
+              <td>{player.yellowCards}</td>
+              <td>{player.redCards}</td>
             </tr>
           ))}
         </tbody>

@@ -19,4 +19,22 @@
     -ms-overflow-style: none;
     scrollbar-width: none;
   }
+
+  .child0 {
+    height: 43rem;
+    background-color: #dedede;
+    -moz-transition: height 1s ease;
+    -webkit-transition: height 1s ease;
+    -o-transition: height 1s ease;
+    transition: height 1s ease;
+  }
+
+  .child1 {
+    height: 15rem;
+    background-color: #dedede;
+    -moz-transition: height 1s ease;
+    -webkit-transition: height 1s ease;
+    -o-transition: height 1s ease;
+    transition: height 1s ease;
+  }
 }

@@ -157,7 +157,7 @@ import TeamCompetes from "../components/pages/tab6/TeamCompetes";
 const Statistical = () => {
   const [indexTab, setIndexTab] = useState(0);
   return (
-    <div className="page ">
+    <div className="page">
       <div className="pb-1 flex gap-16 justify-center items-center mt-6 w-full">
         <ButtonAnimate
           title="Đội thi đấu"

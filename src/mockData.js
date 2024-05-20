@@ -10,19 +10,19 @@ export const CUP_TOP3_IMAGE =
 
 export const topRankCUP = [
   {
-    icon: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQOMCye0OPMGiwBY6Dk3RQ5qIgDD9iCdM4Pk8OzyQjUQ&s",
+    icon: "/vodich.png",
     text: "CTIN",
-    logo: "https://seeklogo.com/images/C/cristiano-ronaldo-cr7-logo-CEAEFC4316-seeklogo.com.png",
+    logo: "/CTIN.png",
     cup: "Vô địch",
   },
   {
-    icon: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQOMCye0OPMGiwBY6Dk3RQ5qIgDD9iCdM4Pk8OzyQjUQ&s",
+    icon: "/aquan.png",
     text: "Kaopiz",
-    logo: "https://seeklogo.com/images/C/cristiano-ronaldo-cr7-logo-CEAEFC4316-seeklogo.com.png",
+    logo: "/Kaopiz.png",
     cup: "Á quân",
   },
   {
-    icon: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQOMCye0OPMGiwBY6Dk3RQ5qIgDD9iCdM4Pk8OzyQjUQ&s",
+    icon: "/giaiba.png",
     text: "Nam Việt FC",
     logo: "",
     cup: "Giải ba",
@@ -56,25 +56,25 @@ export const contentHTML = `<p style="margin-left:7px"><span style="color:#00000
 export const TopDanDau = [
   {
     stt: 1,
-    logo: "",
+    logo: "/Co-well Asia FC.png",
     name: "Co-well asia fc",
     point: 7,
   },
   {
     stt: 2,
-    logo: "",
+    logo: "/lifesup.png",
     name: "lifesup",
     point: 6,
   },
   {
     stt: 3,
-    logo: "",
+    logo: "/Kaopiz.png",
     name: "ntq fc",
     point: 4,
   },
   {
     stt: 4,
-    logo: "",
+    logo: "/mk group.png",
     name: "mk group",
     point: 0,
   },

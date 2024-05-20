@@ -204,7 +204,7 @@ const Time = () => {
       <div className="overflow-x-auto">
         {scheduleData.schedule.map((daySchedule, index) => (
           <div key={index} className="mb-8">
-            <h2 className="text-center bg-[#676ec1] text-white py-2">
+            <h2 className="text-center bg-[#676ec1] text-white py-3 text-xl font-semibold">
               {daySchedule.date}
             </h2>
             <table className="min-w-full bg-white border border-gray-300">

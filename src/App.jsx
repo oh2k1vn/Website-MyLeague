@@ -38,11 +38,11 @@ function App() {
   }, []);
 
   return (
-    <div className="w-full min-h-screen bg-gray-200 flex flex-col ">
+    <div className="w-full min-h-screen bg-[#f8f8f8] flex flex-col ">
       <Header />
       <Banner />
 
-      <div className="flex-1 container py-6">
+      <div className="flex-1 py-6">
         <Routes>
           <Route path="/" element={<Dashboard />} />
           <Route path="/tab2" element={<RoundTable />} />

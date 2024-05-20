@@ -1,14 +1,25 @@
+/* eslint-disable react/prop-types */
+import GoogleMapReact from "google-map-react";
+
 export const ContentLeft = (data) => {
+  const defaultProps = {
+    center: {
+      lat: 10.783839390520939,
+      lng: 106.68808331110604,
+    },
+    zoom: 4,
+  };
+
   return (
     <div className="flex-1 flex flex-col gap-6">
       <section>
         <div className="flex flex-col gap-4">
           {data.data.map((item) => (
-            <div key={item.text} className="flex items-center gap-2">
+            <div key={item.text} className="flex items-center gap-2 ">
               <img src={item.icon} alt="" className="size-6" />
               <span className="font-semibold mr-4">{item.cup}:</span>
               {item.logo && <img src={item.logo} alt="" className="size-6" />}
-              {item.text}
+              <span className="text-green">{item.text}</span>
             </div>
           ))}
         </div>
@@ -16,10 +27,8 @@ export const ContentLeft = (data) => {
 
       <section>
         <div className="flex items-center justify-between">
-          <span className="text-green-600 text-lg cursor-pointer">
-            Top ghi bàn
-          </span>
-          <span className="text-base flex items-center cursor-pointer hover:text-green-600">
+          <span className="text-green text-lg cursor-pointer">Top ghi bàn</span>
+          <span className="text-base flex items-center cursor-pointer hover:text-green">
             Thống kê
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -70,7 +79,7 @@ export const ContentLeft = (data) => {
               {data.topDanDau.map((item, index) => (
                 <tr className="*:p-3" key={index}>
                   <td className="text-center text-[#596377]">{item.stt}</td>
-                  <td className="text-left text-green-600 flex items-center gap-2 uppercase">
+                  <td className="text-left text-green flex items-center gap-2 uppercase text-green">
                     {item.logo && (
                       <img src={item.logo} alt="" className="size-5" />
                     )}
@@ -83,7 +92,7 @@ export const ContentLeft = (data) => {
               ))}
             </tbody>
           </table>
-          <p className="flex items-center px-3 text-sm text-primary hover:text-green-600 cursor-pointer transition-all duration-300">
+          <p className="flex items-center px-3 text-sm text-primary hover:text-green cursor-pointer transition-all duration-300">
             Xem toàn bộ{" "}
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -103,19 +112,31 @@ export const ContentLeft = (data) => {
         <p className="text-sm uppercase mb-2 font-semibold">Vòng 1</p>
 
         <div className="py-4 bg-white shadow flex flex-col gap-4">
-          <div className="grid grid-cols-3 text-green-600 text-sm">
-            <div className="grid-cols-5 text-right">NTQ FC</div>
+          <div className="grid grid-cols-3 text-green text-sm">
+            <div className="grid-cols-5 text-right flex items-center justify-end gap-1 text-green">
+              NTQ FC
+              <img src="/mk group.png" className="size-5" />
+            </div>
             <div className="grid-cols-2 text-center text-primary">4 - 1</div>
-            <div className="grid-cols-5 text-left">MK GROUP</div>
+            <div className="grid-cols-5 text-left flex items-center gap-1 text-green">
+              <img src="/mk group.png" className="size-5 " />
+              MK GROUP
+            </div>
           </div>
 
-          <div className="grid grid-cols-3 text-green-600 text-sm">
-            <div className="grid-cols-5 text-right">CO-WELL ASIA FC</div>
+          <div className="grid grid-cols-3 text-green text-sm">
+            <div className="grid-cols-5 text-right flex items-center justify-end gap-1 text-green">
+              CO-WELL ASIA FC
+              <img src="/Co-well Asia FC.png" className="size-5" />
+            </div>
             <div className="grid-cols-2 text-center text-primary">2 - 1</div>
-            <div className="grid-cols-5 text-left">LIFESUP</div>
+            <div className="grid-cols-5 text-left flex items-center gap-1 text-green">
+              <img src="/lifesup.png" className="size-5 " />
+              LIFESUP
+            </div>
           </div>
 
-          <p className="flex items-center px-3 text-sm text-primary hover:text-green-600 cursor-pointer transition-all duration-300">
+          <p className="flex items-center px-3 text-sm text-primary hover:text-green cursor-pointer transition-all duration-300">
             Xem toàn bộ{" "}
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -135,19 +156,31 @@ export const ContentLeft = (data) => {
         <p className="text-sm uppercase mb-2 font-semibold">Vòng 2</p>
 
         <div className="py-4 bg-white shadow flex flex-col gap-4">
-          <div className="grid grid-cols-3 text-green-600 text-sm">
-            <div className="grid-cols-5 text-right">CO-WELL ASIA FC</div>
+          <div className="grid grid-cols-3 text-green text-sm">
+            <div className="grid-cols-5 text-right flex items-center justify-end gap-1 text-green">
+              CO-WELL ASIA FC
+              <img src="/Co-well Asia FC.png" className="size-5" />
+            </div>
             <div className="grid-cols-2 text-center text-primary">1 - 1</div>
-            <div className="grid-cols-5 text-left">NTQ FC</div>
+            <div className="grid-cols-5 text-left flex items-center gap-1 text-green">
+              <img src="/mk group.png" className="size-5 " />
+              NTQ FC
+            </div>
           </div>
 
-          <div className="grid grid-cols-3 text-green-600 text-sm">
-            <div className="grid-cols-5 text-right">LIFESUP</div>
+          <div className="grid grid-cols-3 text-green text-sm">
+            <div className="grid-cols-5 text-right flex items-center justify-end gap-1 text-green">
+              NTQ FC
+              <img src="/mk group.png" className="size-5" />
+            </div>
             <div className="grid-cols-2 text-center text-primary">3 - 0</div>
-            <div className="grid-cols-5 text-left">MK GROUP</div>
+            <div className="grid-cols-5 text-left flex items-center gap-1 text-green">
+              <img src="/mk group.png" className="size-5 " />
+              MK GROUP
+            </div>
           </div>
 
-          <p className="flex items-center px-3 text-sm text-primary hover:text-green-600 cursor-pointer transition-all duration-300">
+          <p className="flex items-center px-3 text-sm text-primary hover:text-green cursor-pointer transition-all duration-300">
             Xem toàn bộ{" "}
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -167,19 +200,31 @@ export const ContentLeft = (data) => {
         <p className="text-sm uppercase mb-2 font-semibold">Vòng 3</p>
 
         <div className="py-4 bg-white shadow flex flex-col gap-4">
-          <div className="grid grid-cols-3 text-green-600 text-sm">
-            <div className="grid-cols-5 text-right">CO-WELL ASIA FC</div>
-            <div className="grid-cols-2 text-center text-primary">3 - 1</div>
-            <div className="grid-cols-5 text-left">MK GROUP</div>
+          <div className="grid grid-cols-3 text-green text-sm">
+            <div className="grid-cols-5 text-right flex items-center justify-end gap-1 text-green">
+              NTQ FC
+              <img src="/mk group.png" className="size-5" />
+            </div>
+            <div className="grid-cols-2 text-center text-primary">4 - 1</div>
+            <div className="grid-cols-5 text-left flex items-center gap-1 text-green">
+              <img src="/mk group.png" className="size-5 " />
+              MK GROUP
+            </div>
           </div>
 
-          <div className="grid grid-cols-3 text-green-600 text-sm">
-            <div className="grid-cols-5 text-right">CO-WELL ASIA FC</div>
-            <div className="grid-cols-2 text-center text-primary">2 - 1</div>
-            <div className="grid-cols-5 text-left">LIFESUP</div>
+          <div className="grid grid-cols-3 text-green text-sm">
+            <div className="grid-cols-5 text-right flex items-center justify-end gap-1 text-green">
+              NTQ FC
+              <img src="/mk group.png" className="size-5" />
+            </div>
+            <div className="grid-cols-2 text-center text-primary">4 - 1</div>
+            <div className="grid-cols-5 text-left flex items-center gap-1 text-green">
+              <img src="/mk group.png" className="size-5 " />
+              MK GROUP
+            </div>
           </div>
 
-          <p className="flex items-center px-3 text-sm text-primary hover:text-green-600 cursor-pointer transition-all duration-300">
+          <p className="flex items-center px-3 text-sm text-primary hover:text-green cursor-pointer transition-all duration-300">
             Xem toàn bộ{" "}
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -195,11 +240,11 @@ export const ContentLeft = (data) => {
         </div>
       </section>
 
-      <section>
+      <section className="size-full">
         <div className="flex items-center gap-2 text-lg mb-2">
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="size-7 text-green-600"
+            className="size-7 text-green"
             viewBox="0 0 24 24"
           >
             <path
@@ -208,6 +253,14 @@ export const ContentLeft = (data) => {
             />
           </svg>
           <span>Địa điểm tổ chức</span>
+        </div>
+        <div className="size-[20rem]">
+          <GoogleMapReact
+            bootstrapURLKeys={{ key: "" }}
+            yesIWantToUseGoogleMapApiInternals
+            defaultCenter={defaultProps.center}
+            defaultZoom={defaultProps.zoom}
+          ></GoogleMapReact>
         </div>
       </section>
     </div>
